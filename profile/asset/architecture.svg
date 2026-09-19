@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="740 225 1120 760" fill="none" role="img" aria-label="Riido AI Guide 시스템 아키텍처: 사용자와 운영자가 Microsoft Azure 위의 챗봇 프론트·운영 콘솔을 거쳐 백엔드 API와 RAG 서버를 호출하고, 데이터베이스와 LLM API를 사용합니다.">
+  <title>Riido AI Guide 시스템 아키텍처</title>
+  <defs>
+    <radialGradient id="bg-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1300 605) scale(760 520)">
+      <stop offset="0" stop-color="#29D6C5" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#29D6C5" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="bg-clip">
+      <rect x="740" y="225" width="1120" height="760" rx="24"/>
+    </clipPath>
+    <style>
+      text { font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Segoe UI', 'Malgun Gothic', Roboto, sans-serif; }
+      .card { fill: #E3F1EF; }
+      .card-title { font-size: 24px; font-weight: 500; fill: #272F35; letter-spacing: -0.1px; }
+      .card-main { font-size: 16px; font-weight: 400; fill: #272F35; letter-spacing: -0.38px; }
+      .card-sub { font-size: 16px; font-weight: 400; fill: #6B7780; letter-spacing: -0.38px; }
+      .pill { fill: #E1E7E7; }
+      .actor { font-size: 16px; fill: #272F35; letter-spacing: -0.38px; }
+      .label { font-size: 14px; fill: #272F35; letter-spacing: -0.34px; }
+      .wire { stroke: #53BAB0; stroke-width: 1; fill: none; }
+      .wire-end { fill: #53BAB0; }
+    </style>
+  </defs>
+
+  <!-- 배경 -->
+  <g clip-path="url(#bg-clip)">
+    <rect x="740" y="225" width="1120" height="760" fill="#FFFFFF"/>
+    <rect x="740" y="225" width="1120" height="760" fill="url(#bg-glow)"/>
+  </g>
+
+  <!-- Microsoft Azure 경계 -->
+  <rect x="781.5" y="325" width="1038" height="393" rx="24" fill="none" stroke="#9AA3A8" stroke-dasharray="6 4"/>
+  <text x="1301" y="355" text-anchor="middle" font-size="14" fill="#5D666C" letter-spacing="-0.34">MICROSOFT AZURE</text>
+
+  <!-- 연결선 -->
+  <!-- User → 챗봇 프론트 -->
+  <line class="wire" x1="950.75" y1="307" x2="950.75" y2="350"/>
+  <circle class="wire-end" cx="950.75" cy="307" r="2.67"/>
+  <polygon class="wire-end" points="950.75,355 947.86,350 953.64,350"/>
+  <!-- Administrator → 운영 콘솔 -->
+  <line class="wire" x1="1649.75" y1="307" x2="1649.75" y2="350"/>
+  <circle class="wire-end" cx="1649.75" cy="307" r="2.67"/>
+  <polygon class="wire-end" points="1649.75,355 1646.86,350 1652.64,350"/>
+  <!-- 챗봇 프론트 → 백엔드 API -->
+  <line class="wire" x1="950.75" y1="479.5" x2="950.75" y2="558.5"/>
+  <circle class="wire-end" cx="950.75" cy="479.5" r="2.67"/>
+  <polygon class="wire-end" points="950.75,563.5 947.86,558.5 953.64,558.5"/>
+  <!-- 운영 콘솔 → RAG 서버 -->
+  <line class="wire" x1="1650.75" y1="479.5" x2="1650.75" y2="558.5"/>
+  <circle class="wire-end" cx="1650.75" cy="479.5" r="2.67"/>
+  <polygon class="wire-end" points="1650.75,563.5 1647.86,558.5 1653.64,558.5"/>
+  <!-- 백엔드 API → RAG 서버 -->
+  <line class="wire" x1="1091" y1="626.5" x2="1505" y2="626.5"/>
+  <circle class="wire-end" cx="1091" cy="626.5" r="2.67"/>
+  <polygon class="wire-end" points="1510,626.5 1505,623.61 1505,629.39"/>
+  <!-- RAG 서버 → LLM API -->
+  <line class="wire" x1="1723" y1="688.5" x2="1723" y2="813.5"/>
+  <circle class="wire-end" cx="1723" cy="688.5" r="2.67"/>
+  <polygon class="wire-end" points="1723,818.5 1720.11,813.5 1725.89,813.5"/>
+  <!-- 백엔드 API → 데이터베이스 -->
+  <g transform="translate(948.34 685.83)">
+    <path class="wire" d="M2.667 2.667C4.2 18.4 19.95 34.6 48.6 47.4C77.3 60.3 119 69.8 173.4 72.1C225.6 74.4 262.6 79.6 288.2 88.7C313.7 97.8 327.6 110.9 332.9 127.6"/>
+    <circle class="wire-end" cx="2.667" cy="2.667" r="2.67"/>
+    <polygon class="wire-end" points="334.667,132.667 336.072,127.067 330.519,128.65"/>
+  </g>
+  <!-- RAG 서버 → 데이터베이스 -->
+  <g transform="translate(1652.66 685.83) scale(-1 1)">
+    <path class="wire" d="M2.667 2.667C4.2 18.4 19.95 34.6 48.6 47.4C77.3 60.3 119 69.8 173.4 72.1C225.6 74.4 262.6 79.6 288.2 88.7C313.7 97.8 327.6 110.9 332.9 127.6"/>
+    <circle class="wire-end" cx="2.667" cy="2.667" r="2.67"/>
+    <polygon class="wire-end" points="334.667,132.667 336.072,127.067 330.519,128.65"/>
+  </g>
+
+  <!-- 사용자 접점 -->
+  <rect class="pill" x="919" y="265" width="65" height="42" rx="21"/>
+  <text class="actor" x="951.5" y="291.6" text-anchor="middle">User</text>
+  <rect class="pill" x="1588" y="265" width="124" height="42" rx="21"/>
+  <text class="actor" x="1650" y="291.6" text-anchor="middle">Administrator</text>
+
+  <!-- 챗봇 프론트 -->
+  <rect class="card" x="811" y="354.5" width="280" height="125" rx="24"/>
+  <text class="card-title" x="841" y="397.3">챗봇 프론트</text>
+  <text class="card-main" x="841" y="428.3">React · Vite · JavaScript</text>
+  <text class="card-sub" x="841" y="454.3">Azure Static Web Apps</text>
+
+  <!-- 운영 콘솔 -->
+  <rect class="card" x="1510" y="354.5" width="280" height="125" rx="24"/>
+  <text class="card-title" x="1540" y="397.3">운영 콘솔</text>
+  <text class="card-main" x="1540" y="428.3">React · Vite · JavaScript</text>
+  <text class="card-sub" x="1540" y="454.3">Azure Static Web Apps</text>
+
+  <!-- 백엔드 API -->
+  <rect class="card" x="811" y="563.5" width="280" height="125" rx="24"/>
+  <text class="card-title" x="841" y="606.3">백엔드 API</text>
+  <text class="card-main" x="841" y="637.3">Java 21 · Spring Boot · JPA</text>
+  <text class="card-sub" x="841" y="663.3">Azure Container Apps</text>
+
+  <!-- RAG 서버 -->
+  <rect class="card" x="1510" y="563.5" width="280" height="125" rx="24"/>
+  <text class="card-title" x="1540" y="606.3">RAG 서버</text>
+  <text class="card-main" x="1540" y="637.3">Python · FastAPI</text>
+  <text class="card-sub" x="1540" y="663.3">Azure Container Apps</text>
+
+  <!-- 데이터베이스 -->
+  <rect class="card" x="1161" y="818.5" width="280" height="125" rx="24"/>
+  <text class="card-title" x="1191" y="861.3">데이터베이스</text>
+  <text class="card-main" x="1191" y="892.3">PostgreSQL · pgvector</text>
+  <text class="card-sub" x="1191" y="918.3">Supabase</text>
+
+  <!-- LLM API -->
+  <rect class="card" x="1510" y="818.5" width="280" height="125" rx="24"/>
+  <text class="card-title" x="1540" y="861.3">LLM API</text>
+  <text class="card-main" x="1540" y="892.3">OpenAI</text>
+  <text class="card-sub" x="1540" y="918.3">임베딩 · 답변 생성</text>
+
+  <!-- 연결 라벨 -->
+  <rect class="pill" x="913" y="507.5" width="75" height="28" rx="14"/>
+  <text class="label" x="950.5" y="526.4" text-anchor="middle">HTTPS</text>
+
+  <rect class="pill" x="1583" y="507.5" width="135" height="28" rx="14"/>
+  <text class="label" x="1650.5" y="526.4" text-anchor="middle">HTTPS · 문서 관리</text>
+
+  <rect class="pill" x="1196" y="612.5" width="185" height="28" rx="14"/>
+  <text class="label" x="1288.5" y="631.4" text-anchor="middle">내부 호출 · http://rag-ai-v3</text>
+
+  <rect class="pill" x="1025" y="739.5" width="145" height="28" rx="14"/>
+  <text class="label" x="1097.5" y="758.4" text-anchor="middle">JDBC · 대화 · 피드백</text>
+
+  <rect class="pill" x="1427" y="739.5" width="128" height="28" rx="14"/>
+  <text class="label" x="1491" y="758.4" text-anchor="middle">벡터 · 키워드 검색</text>
+
+  <rect class="pill" x="1683" y="739.5" width="79" height="28" rx="14"/>
+  <text class="label" x="1722.5" y="758.4" text-anchor="middle">API 호출</text>
+</svg>
